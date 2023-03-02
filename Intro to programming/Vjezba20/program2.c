@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void){
+	int l[11]={0};
+	srand((unsigned int)time(NULL));
+	for(int i=0;i<1000000;i++){
+		l[(rand()%(60-50+1)+50)-50]+=1;
+	}
+	for(int i=0;i<11;i++){
+		printf("%d\n",l[i]);
+	}
+	return 0;
+}
